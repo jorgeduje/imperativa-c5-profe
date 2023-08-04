@@ -83,7 +83,29 @@ console.log( numeroUno !== numeroDos) // ---> estricta
 // console.log( numeroUno >= numeroDos)
 // console.log( numeroUno <= numeroDos)
 
-
-
-
+console.log("------------")
 // LINK ---> logicos
+// FALSY´s ---> 0 --- "" --- undefined --- null
+// TRUTHY´s ---> 1 --- "mama"
+
+// AND ---> &&
+
+let estaLogueado = false
+let esAdmin = false
+
+// SE QUEDA CON EL ULTIMO TRUTHY SI SON TODOS TRUTHY
+// SE QUEDA CON EL PRIMER FALSY
+let tienePermiso =  estaLogueado === true && 0 && undefined && esAdmin === true && "mama" && 1
+console.log(tienePermiso)
+
+// OR ---> ||
+let tienePermisoDos = false || false  || 0 || "mama" ||  ""
+console.log(tienePermisoDos)
+
+
+// NOT ---> !
+
+let f = false 
+console.log( !f )
+
+
