@@ -51,7 +51,7 @@ arrayInvertido.push(  numeritos.pop() )
 
 console.log(arrayInvertido)
 
-let palabras = ["casa", "avion", "pera", "manzana", "banana"]
+let palabras = ["casa", "avion", "pera", "manzana", true, {}, {}]
 console.log(palabras.length )
 
 
