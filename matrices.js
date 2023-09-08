@@ -37,6 +37,7 @@ let mat2 = [
 // mat2[0][2]
 // mat2[1][2]
 // mat2[2][2]
+
 const recorrerCol = (matriz, numCol) => {
   for (let i = 0; i < matriz.length; i++) {
     if (matriz[i][numCol] !== undefined) {
@@ -48,9 +49,69 @@ const recorrerCol = (matriz, numCol) => {
 recorrerCol(mat2, 2);
 console.table(mat2);
 
-// TODO ---> Matriz ---> doble for / for anidado
-
 // UNICAMENTE CUANDO LA MATRIZ ES CUADRADA ( mismas cantidad de filas que columnas )
+
+let matrix = [
+  ["pepe", 3, 5],
+  [2, "carmen", 1],
+  [7, 5, "maria"],
+];
+
+// matrix[0][0]
+// matrix[1][1]
+// matrix[2][2]
+
 // TODO ---> Diagonal principal
 
+const recorrerPrincipal = (mat) => {
+  for (let i = 0; i < mat.length; i++) {
+    mat[i][i] = mat[i][i].toUpperCase();
+  }
+};
+
+recorrerPrincipal(matrix);
+console.table(matrix);
+
 // TODO ---> Diagonal secundaria
+let matrix2 = [
+  [1, 3, 5],
+  [2, 6, 1],
+  [7, 5, 3],
+];
+
+// matrix2[0][2]
+// matrix2[1][1]
+// matrix2[2][0]
+
+const recorrerSec = (mat) => {
+  let acc = 0;
+  for (let i = 0; i < mat.length; i++) {
+    if (mat[i][mat.length - (i + 1)] % 2 !== 0) {
+      acc += mat[i][mat.length - (i + 1)];
+    }
+  }
+  return acc;
+};
+
+// TODO ---> Matriz ---> doble for / for anidado
+
+let matrix3 = [
+  [1, 3, 5],
+  [2, 6, 1],
+  [7, 5, 3],
+];
+
+const recorrerMatriz = (mat) => {
+  for (let fila = 0; fila < mat.length; fila++) {
+
+    for (let col = 0; col < mat[fila].length; col++) {
+      console.log("Estoy recorriendo la fila " + fila + " en su columna " + col )
+      console.log(mat[fila][col])
+    }
+
+  }
+
+  console.log("termine")
+};
+
+recorrerMatriz(matrix3)
